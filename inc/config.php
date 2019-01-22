@@ -2,7 +2,9 @@
 $cloudflareDetails = [
 	'email' => '', // Enter the e-mail associated with your Cloudflare account.
 	'apikey' => '', // Enter the API key associated with your Cloudflare account.
-	'domain' => '' // Enter the domain you'd like to swap out the zone for.
+	'domain' => '', // Enter the domain you'd like to swap out the zone for.
+	'differentZoneName' => false, // If you're managing a subdomain, you'll have to enter the root domain below. Activate this too.
+	'zoneName' => '' // ^
 ];
 
 $ips = [
