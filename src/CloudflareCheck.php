@@ -48,7 +48,7 @@ class CloudflareFailover{
 		$dns->deleteRecord($zoneID, $records->result[0]->id);
 
 		if ($dns->addRecord($zoneID, "A", $domain, $newIP, 0, true) === true) {
-	    	return true;
+			return true;
 		}else{
 			return false;
 		}
