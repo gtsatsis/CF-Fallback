@@ -1,6 +1,6 @@
 {
     "require": {
-        "cloudflare/sdk"
+        "cloudflare/sdk": "^1.1"
     },
     "autoload": {
         "psr-4": {"Failover\\": "src/"}
