@@ -1,0 +1,8 @@
+{
+    "require": {
+        "cloudflare/sdk"
+    },
+    "autoload": {
+        "psr-4": {"Failover\\": "src/"}
+    }
+}
