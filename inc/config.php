@@ -14,4 +14,8 @@ $opts = [
 	'ssl' => true, // SSL Setting, pretty self-explanatory
 	'sslVerify' => true
 	];
+
+$authorizationKeys = [
+    ''
+    ];
 ?>

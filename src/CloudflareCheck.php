@@ -1,13 +1,13 @@
 <?php
 namespace Failover;
 
-require_once('vendor/autoload.php');
+require_once('../vendor/autoload.php');
 
-class CloudflareFailover{
+class CloudflareCheck{
 
-	function __construct(string $domain, string $email, string $apiKey){
-		$cloudflareKey     = new Cloudflare\API\Auth\APIKey($email, $apiKey);
-		$cloudflareAdapter = new Cloudflare\API\Adapter\Guzzle($cloudflareKey);
+	function __construct(string $email, string $apiKey, string $domain){
+		$cloudflareKey     = new \Cloudflare\API\Auth\APIKey($email, $apiKey);
+		$cloudflareAdapter = new \Cloudflare\API\Adapter\Guzzle($cloudflareKey);
 		$cloudflareZones = new \Cloudflare\API\Endpoints\Zones($cloudflareAdapter);
 		$zoneID = $cloudflareZones->getZoneID($domain);
 		$dns = new \Cloudflare\API\Endpoints\DNS($cloudflareAdapter);
